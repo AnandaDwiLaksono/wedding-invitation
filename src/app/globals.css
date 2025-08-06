@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #A67D4C;
+  --primary-dark: #8B6B41;
+}
+
+@layer base {
+  body {
+    color: #1f2937; /* Equivalent to Tailwind's text-gray-800 */
+  }
+}
+
+@layer components {
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  
+  .text-primary {
+    color: var(--primary);
+  }
+  
+  .hover\:bg-primary-dark:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .focus\:border-primary:focus {
+    border-color: var(--primary);
+  }
+  
+  .focus\:ring-primary:focus {
+    --tw-ring-color: var(--primary);
+  }
+}
